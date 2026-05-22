@@ -5,7 +5,7 @@
 class Tuitube < Formula
   desc "Terminal music player for curated YouTube channels with Claude MCP support"
   homepage "https://github.com/gitcoder89431/tuitube"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   depends_on "mpv"
@@ -13,8 +13,8 @@ class Tuitube < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.0/tuitube_0.2.0_darwin_amd64.tar.gz"
-      sha256 "14d8db73412e13aaf0eaad34898b690bdf619196fd1b264c39d4eae671fe93be"
+      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.1/tuitube_0.2.1_darwin_amd64.tar.gz"
+      sha256 "65faf596cd33648c9f9a47e36f543b24a5be0f80954396745382f720da3d964d"
 
       define_method(:install) do
         bin.install "tuitube"
@@ -22,8 +22,8 @@ class Tuitube < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.0/tuitube_0.2.0_darwin_arm64.tar.gz"
-      sha256 "6b34dea35affdcad2362b4d80b50ff12f6ba18c478ac4039b726b8e73026eefe"
+      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.1/tuitube_0.2.1_darwin_arm64.tar.gz"
+      sha256 "95b13cf614ad6916f004641895fa968b2ee92bc01bd3ba3391d2d1161b00bac7"
 
       define_method(:install) do
         bin.install "tuitube"
@@ -34,16 +34,16 @@ class Tuitube < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.0/tuitube_0.2.0_linux_amd64.tar.gz"
-      sha256 "fe698ffe2c263e8cd618a2ce290130d513fad73ba231c5dded7ee5a74dbbaa3c"
+      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.1/tuitube_0.2.1_linux_amd64.tar.gz"
+      sha256 "8d4f2a369fb0b0054d5d878fc01307add296cba969efbfacdb74a59443cf82f4"
       define_method(:install) do
         bin.install "tuitube"
         (share/"tuitube").install "catalog.db"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.0/tuitube_0.2.0_linux_arm64.tar.gz"
-      sha256 "f1f1092a4a29a5c4a7985659d7afc342520e8f2727ec7ac98ce78afa51dfe99f"
+      url "https://github.com/gitcoder89431/tuitube/releases/download/v0.2.1/tuitube_0.2.1_linux_arm64.tar.gz"
+      sha256 "2137bdcf6cd30c806af73cd8cf5936971b2bf940f5475f87ebe849c63b129ba0"
       define_method(:install) do
         bin.install "tuitube"
         (share/"tuitube").install "catalog.db"
